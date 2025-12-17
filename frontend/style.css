@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 40px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+#result {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+/* Container that holds all 5 forecast cards */
+.forecast-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.forecast-h3 {
+    text-align: center;
+}
+
+/* Individual forecast card */
+.forecast-day {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    width: 120px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
