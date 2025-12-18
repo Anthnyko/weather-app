@@ -13,7 +13,7 @@ async function getWeather() {
     }
 
     try {
-        const response = await fetch(`http://localhost:8000/weather?city=${city}`);
+        const response = await fetch(`https://weather-app-hoba.onrender.com/weather?city=${city}`);
         const data = await response.json();
 
         // If backend returned an error
