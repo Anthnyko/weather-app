@@ -34,6 +34,7 @@ async function getWeather() {
         `;
 
         // Fetch and display the 5-day forecast
+        await new Promise(resolve => setTimeout(resolve, 300));
         const forecastHTML = await getForecast(city);
 
         if (!forecastHTML) {
