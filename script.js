@@ -53,7 +53,7 @@ async function getWeather() {
 }
 
 async function getForecast(city) {
-    const response = await fetch(`http://localhost:8000/forecast?city=${city}`);
+    const response = await fetch(`https://weather-app-hoba.onrender.com/forecast?city=${city}`);
     const data = await response.json();
 
     if (data.error) {
