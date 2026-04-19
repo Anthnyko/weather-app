@@ -1,5 +1,10 @@
 document.getElementById("searchBtn").addEventListener("click", getWeather);
 
+function capitalizeWords(str) {
+    return str.replace(/\b\w/g, char => char.toUpperCase());
+}
+
+
 async function getWeather() {
     const city = document.getElementById("cityInput").value.trim();
 
@@ -29,7 +34,7 @@ async function getWeather() {
         // If everything is good, display weather info
         document.getElementById("result").innerHTML = `
             <h2>${data.name}</h2>
-            <p>${data.weather[0].description}</p>
+            <p>${capitalizeWords(data.weather[0].description)}</p>
             <p>Temperature: ${data.main.temp}°F</p>
         `;
 
@@ -72,7 +77,7 @@ async function getForecast(city) {
         html += `
             <div class="forecast-day">
                 <p><strong>${item.dt_txt.split(" ")[0]}</strong></p>
-                <p>${item.weather[0].description}</p>
+                <p>${capitalizeWords(item.weather[0].description)}</p>
                 <p>${item.main.temp}°F</p>
             </div>
         `;
